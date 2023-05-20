@@ -1,0 +1,13 @@
+---
+const { testimonial, author } = Astro.props;
+---
+
+<article class="grid md:grid-cols-3 gap-x-4">
+  <div class="col-span-1">
+    <slot />
+  </div>
+  <div class="col-span-2">
+    <p>{testimonial}</p>
+    <p>{author}</p>
+  </div>
+</article>

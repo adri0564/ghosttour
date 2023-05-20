@@ -1,16 +1,17 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/Hero.astro";
+import TestimonialSection from "../components/TestimonialSection.astro";
 ---
 
 <MainLayout title="Home">
   <Hero />
+  <TestimonialSection />
   <section class="grid grid-cols-8">
     <article class="col-span-2 col-start-3 h-60 w-60">
       <div id="typewriter" class="typewriter"></div>
     </article>
   </section>
-  <img src="/imgs/white_paper_bg.webp" alt="Beskrivelse af billedet" />
 </MainLayout>
 
 <style>
