@@ -1,15 +1,62 @@
 ---
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Home">
+  <Hero />
+  <section class="grid grid-cols-8">
+    <article class="col-span-2 col-start-3 h-60 w-60">
+      <div id="typewriter" class="typewriter"></div>
+    </article>
+  </section>
+  <img src="/imgs/white_paper_bg.webp" alt="Beskrivelse af billedet" />
+</MainLayout>
+
+<style>
+  @keyframes typewriter-animation {
+    from {
+      width: 0;
+    }
+  }
+
+  .typewriter {
+    white-space: pre-line;
+    overflow: hidden;
+    animation: typewriter-animation 5s steps(40) forwards;
+    background-image: url(/imgs/white_paper_bg.webp);
+  }
+</style>
+
+<script>
+  const typewriterElement = document.getElementById("typewriter");
+  const text = "Hør historier om helt almindelige menneskers oplevelser med spøgelser"; // Custom tekst
+
+  function setTextWithTypewriterEffect() {
+    let index = 0;
+    let typewriterText = "";
+
+    function typeWriter() {
+      typewriterText += text.charAt(index);
+      typewriterElement.textContent = typewriterText;
+      index++;
+
+      if (index < text.length) {
+        setTimeout(typeWriter, 100); // Hastigheden på skrivemaskineeffekten (i millisekunder)
+      }
+    }
+
+    setTimeout(typeWriter, 1000); // Start skrivemaskineeffekten efter 1 sekunder
+  }
+
+  // Lyt efter scroll-begivenheden og udfør funktionen, når elementet er synligt på skærmen
+  window.addEventListener("scroll", function () {
+    const rect = typewriterElement.getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+
+    if (isVisible) {
+      setTextWithTypewriterEffect();
+      window.removeEventListener("scroll", arguments.callee);
+    }
+  });
+</script>
