@@ -10,9 +10,12 @@ import Footer from "../components/Footer.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Special+Elite&display=swap" rel="stylesheet" />
     <title>Ghosttour</title>
   </head>
-  <body>
+  <body class="bg-black text-primary-text font-regular">
     <main class="max-w-screen-xl mx-auto">
       <Header />
       <slot />
