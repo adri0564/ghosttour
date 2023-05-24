@@ -1,0 +1,10 @@
+---
+const { pageTitle, summary } = Astro.props;
+---
+
+<section class="grid md:grid-cols-2 gap-8 pt-32">
+  <div class="grid gap-8">
+    <h1 class="font-special-elite text-brand-color text-[85px] leading-none">{pageTitle}</h1>
+    <p class="text-[23px] leading-normal">{summary}</p>
+  </div>
+</section>
