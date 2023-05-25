@@ -1,10 +1,22 @@
 ---
 ---
 
-<!-- HEADER SECTION -->
-<nav>
+<!-- NAVIGATION --><!-- <nav>
   <ul class="flex justify-between text-[28px] text-brand-color font-special-elite text-7">
-    <!-- <li><img src="" alt="" /></li> -->
+    <li class="text-primary-text"><a href="#">Ghosttour</a></li>
+    <li><a href="/byvandringer">Byvandringer</a></li>
+    <li><a href="/booking">Booking</a></li>
+    <li><a href="/omos">Om os</a></li>
+    <li><a href="/english">In English</a></li>
+  </ul>
+</nav> -->
+<nav class="w-full sticky top-0 md:pt-4 md:top-auto">
+  <button class="block md:hidden" id="menu-toggle">
+    <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24">
+      <path fill="#f8f6f2" d="M3 18v-2h18v2H3Zm0-5v-2h18v2H3Zm0-5V6h18v2H3Z"></path>
+    </svg>
+  </button>
+  <ul class="justify-end md:flex md:justify-between text-[35px] md:text-[28px] font-dm-sans md:font-special-elite bg-transparent" id="menu">
     <li class="text-primary-text"><a href="#">Ghosttour</a></li>
     <li><a href="/byvandringer">Byvandringer</a></li>
     <li><a href="/booking">Booking</a></li>
@@ -12,3 +24,32 @@
     <li><a href="/english">In English</a></li>
   </ul>
 </nav>
+
+<style>
+  @media (max-width: 768px) {
+    #menu-toggle {
+      display: block;
+    }
+
+    #menu {
+      justify-content: flex-end;
+      display: none;
+      list-style: none;
+    }
+
+    #menu-toggle.active + #menu {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  // DROP DOWN MENU
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+
+  menuToggle.addEventListener("click", function () {
+    menuToggle.classList.toggle("active");
+    menu.classList.toggle("hidden");
+  });
+</script>

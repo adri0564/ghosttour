@@ -1,0 +1,24 @@
+---
+import ByvandringDetaljer from "./ByvandringDetaljer.astro";
+import ByvandringAfgange from "./ByvandringAfgange.astro";
+---
+
+<section class="grid md:grid-cols-2 gap-16 max-w-screen-lg mx-auto">
+  <ByvandringDetaljer timer="1" minutter="30" start="Gråbrødre Torv" slut="Vestergade" voksenPris="120" barnePris="60">
+    <img class="w-full" src="imgs/ghosttour_spoegelsestur_01.webp" alt="" />
+  </ByvandringDetaljer>
+
+  <table class="col-span-1 h-min">
+    <thead>
+      <tr class="text-[#9da3ae] font-dm-sans items-start text-left">
+        <th class="py-2 px-4"></th>
+        <th class="py-2 px-4">Dato</th>
+        <th class="py-2 px-4"></th>
+        <th class="py-2 px-4">Klokkeslet</th>
+      </tr>
+    </thead>
+    <tbody class="w-full">
+      <ByvandringAfgange dato="02/06-2023" klokkeslet="21:00" />
+    </tbody>
+  </table>
+</section>

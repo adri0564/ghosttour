@@ -1,11 +1,12 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import PageIntro from "../components/PageIntro.astro";
+import ByvandringSpoegelseOversigt from "../components/ByvandringSpoegelseOversigt.astro";
 ---
 
 <MainLayout title="Byvandringer">
   <PageIntro pageTitle="Byvandringer" summary="Vores byvandringer i 2023 begynder d. 10. marts og har sin sidste tur d. 15. december. OBS. Husk at klæde dig på fornuftigt på, da alle vores ture foregår til fods og udendør." />
-  <section class="pt-32 max-w-screen-lg mx-auto">
+  <!-- <section class="pt-32 max-w-screen-lg mx-auto">
     <table class="w-full">
       <thead>
         <tr class="text-[#9da3ae] font-dm-sans">
@@ -45,22 +46,23 @@ import PageIntro from "../components/PageIntro.astro";
         </tr>
       </tbody>
     </table>
-  </section>
+  </section> -->
+
+  <ByvandringSpoegelseOversigt />
 
   <!-- TEST -->
   <section class="pt-32 max-w-screen-lg mx-auto grid md:grid-cols-2 gap-16">
     <div class="w-full col-span-1"><img src="imgs/ghosttour_menneskeskaebnertur_01.webp" alt="" /></div>
     <table class="col-span-1 h-min">
       <thead>
-        <tr class="text-[#9da3ae] font-dm-sans">
+        <tr class="text-[#9da3ae] font-dm-sans items-start text-left">
           <th class="py-2 px-4"></th>
           <th class="py-2 px-4">Dato</th>
           <th class="py-2 px-4"></th>
           <th class="py-2 px-4">Klokkeslet</th>
-          <th class="py-2 px-4"></th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="w-full">
         <tr>
           <td class="py-2 px-4">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M11 14v-2h2v2h-2Zm-4 0v-2h2v2H7Zm8 0v-2h2v2h-2Zm-4 4v-2h2v2h-2Zm-4 0v-2h2v2H7Zm8 0v-2h2v2h-2ZM3 22V4h3V2h2v2h8V2h2v2h3v18H3Zm2-2h14V10H5v10Z"></path></svg>
@@ -70,9 +72,9 @@ import PageIntro from "../components/PageIntro.astro";
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M14.55 16.55L11 13V8h2v4.175l2.95 2.95l-1.4 1.425ZM11 6V4h2v2h-2Zm7 7v-2h2v2h-2Zm-7 7v-2h2v2h-2Zm-7-7v-2h2v2H4Zm8 9q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Zm0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20Zm0-8Z"></path></svg>
           </td>
           <td class="py-2 px-4">19:00</td>
-          <td class="py-2 px-4">
+          <!-- <td class="py-2 px-4">
             <button class="bg-primary-text text-brand-color font-medium py-2 px-4">Book byvandring</button>
-          </td>
+          </td> -->
         </tr>
         <tr class="bg-primary-text bg-opacity-[16%]">
           <td class="py-2 px-4">
@@ -83,9 +85,9 @@ import PageIntro from "../components/PageIntro.astro";
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M14.55 16.55L11 13V8h2v4.175l2.95 2.95l-1.4 1.425ZM11 6V4h2v2h-2Zm7 7v-2h2v2h-2Zm-7 7v-2h2v2h-2Zm-7-7v-2h2v2H4Zm8 9q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Zm0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20Zm0-8Z"></path></svg>
           </td>
           <td class="py-2 px-4">19:00</td>
-          <td class="py-2 px-4">
+          <!-- <td class="py-2 px-4">
             <button class="bg-primary-text text-brand-color font-medium py-2 px-4">Book byvandring</button>
-          </td>
+          </td> -->
         </tr>
       </tbody>
     </table>
