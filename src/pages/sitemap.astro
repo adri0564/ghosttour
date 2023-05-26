@@ -1,0 +1,20 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
+---
+
+<MainLayout title="Om os">
+  <PageIntro pageTitle="Sitemap" summary="Her finder du en oversigt over alle oprettede pages." />
+  <ul class="pt-32 grid gap-4">
+    <li><a href="/index">Index</a></li>
+    <li><a href="/byvandringer">Byvandringer</a></li>
+    <li><a href="/booking">Booking</a></li>
+    <li><a href="/omos">Om os</a></li>
+    <li><a href="/english">In English</a></li>
+    <li><a href="/spoegelsestur">Spøgelsestur</a></li>
+    <li><a href="/handelsbetingelser">Handelsbetingelser</a></li>
+    <li><a href="/privatlivspolitik">Privatlivspolitik</a></li>
+    <li><a href="/cookiepolitik">Cookie politik</a></li>
+    <li><a href="/sitemap">Sitemap</a></li>
+  </ul>
+</MainLayout>

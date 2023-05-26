@@ -8,19 +8,19 @@ import PageIntro from "../components/PageIntro.astro";
   <section class="pt-32 max-w-screen-lg mx-auto">
     <form class="font-dm-sans">
       <div class="mb-4">
-        <label for="name" class="block text-primary-text">Navn</label>
-        <input type="text" id="name" name="name" class="form-input" placeholder="Fornavn Efternavn" inputmode="text" />
+        <label for="name">Dit fornavn og efternavn</label>
+        <input type="text" id="name" name="name" class="form-input focus:border-brand-color focus:text-red-400" placeholder="Fornavn Efternavn" inputmode="text" />
       </div>
       <div class="mb-4">
-        <label for="phone" class="block text-primary-text">Telefonnummer</label>
+        <label for="phone">Dit telefonnummer</label>
         <input type="tel" id="phone" name="phone" class="form-input" placeholder="(0045)12345678" inputmode="tel" />
       </div>
       <div class="mb-4">
-        <label for="email" class="block text-primary-text">E-mail</label>
+        <label for="email">Din e-mail adresse</label>
         <input type="email" id="email" name="email" class="form-input" placeholder="eksempel@mail.dk" inputmode="email" />
       </div>
       <div class="mb-4">
-        <label for="tour" class="block text-primary-text">Tur</label>
+        <label for="tour">Vælg en byvandring</label>
         <select id="tour" name="tour" class="form-select">
           <option value="a">Spøgelsestur</option>
           <option value="b">Natmændstur</option>
@@ -28,26 +28,31 @@ import PageIntro from "../components/PageIntro.astro";
         </select>
       </div>
       <div class="mb-4">
-        <label for="date" class="block text-primary-text">Dato</label>
+        <label for="date">Vælg en dato</label>
         <input type="date" id="date" name="date" class="form-input" />
       </div>
       <div class="mb-4">
-        <label for="time" class="block text-primary-text">Tidspunkt</label>
+        <label for="time">Vælg et tidspunkt</label>
         <input type="time" id="time" name="time" class="form-input" />
       </div>
       <div class="mb-4">
-        <label for="participants" class="block text-primary-text">Antal deltagere</label>
+        <label for="participants">Antal deltagere</label>
         <input type="number" id="participants" name="participants" class="form-input" inputmode="numeric" />
       </div>
       <div class="mb-4">
-        <label for="comments" class="block text-primary-text">Kommentarer/spørgsmål</label>
-        <textarea id="comments" name="comments" class="form-textarea" placeholder="Her kan du efterlade en kommentar eller et spørgsmål"></textarea>
+        <label for="comments">Kommentarer/spørgsmål</label>
+        <textarea id="comments" name="comments" class="form-textarea" placeholder="Tilføj en kommentar eller et spørgsmål her og vi vender tilbage hurtigst muligt."></textarea>
       </div>
     </form>
   </section>
 </MainLayout>
 
 <style>
+  label {
+    color: #f8f6f2;
+    /* display: block; */
+  }
+
   input,
   select,
   textarea {
