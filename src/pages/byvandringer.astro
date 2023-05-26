@@ -10,41 +10,41 @@ import ByvandringSpoegelseOversigt from "../components/ByvandringSpoegelseOversi
   <ByvandringSpoegelseOversigt />
 
   <!-- TEST -->
-  <section class="pt-32 max-w-screen-lg mx-auto grid md:grid-cols-2 gap-16">
+  <section class="pt-xxlarge max-w-screen-lg mx-auto grid md:grid-cols-2 gap-xlarge">
     <div class="w-full col-span-1"><img src="imgs/ghosttour_menneskeskaebnertur_01.webp" alt="" /></div>
     <table class="col-span-1 h-min">
       <thead>
         <tr class="text-tertiary-color font-dm-sans items-start text-left">
-          <th class="py-2 px-4"></th>
-          <th class="py-2 px-4">Dato</th>
-          <th class="py-2 px-4"></th>
-          <th class="py-2 px-4">Klokkeslet</th>
+          <th></th>
+          <th>Dato</th>
+          <th></th>
+          <th>Klokkeslet</th>
         </tr>
       </thead>
       <tbody class="w-full">
         <tr>
-          <td class="py-2 px-4">
+          <td>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M11 14v-2h2v2h-2Zm-4 0v-2h2v2H7Zm8 0v-2h2v2h-2Zm-4 4v-2h2v2h-2Zm-4 0v-2h2v2H7Zm8 0v-2h2v2h-2ZM3 22V4h3V2h2v2h8V2h2v2h3v18H3Zm2-2h14V10H5v10Z"></path></svg>
           </td>
-          <td class="py-2 px-4">23/04-2023</td>
-          <td class="py-2 px-4">
+          <td>23/04-2023</td>
+          <td>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M14.55 16.55L11 13V8h2v4.175l2.95 2.95l-1.4 1.425ZM11 6V4h2v2h-2Zm7 7v-2h2v2h-2Zm-7 7v-2h2v2h-2Zm-7-7v-2h2v2H4Zm8 9q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Zm0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20Zm0-8Z"></path></svg>
           </td>
-          <td class="py-2 px-4">19:00</td>
-          <!-- <td class="py-2 px-4">
+          <td>19:00</td>
+          <!-- <td>
             <button class="bg-primary-color text-brand-color font-medium py-2 px-4">Book byvandring</button>
           </td> -->
         </tr>
         <tr class="bg-primary-color bg-opacity-[16%]">
-          <td class="py-2 px-4">
+          <td>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M11 14v-2h2v2h-2Zm-4 0v-2h2v2H7Zm8 0v-2h2v2h-2Zm-4 4v-2h2v2h-2Zm-4 0v-2h2v2H7Zm8 0v-2h2v2h-2ZM3 22V4h3V2h2v2h8V2h2v2h3v18H3Zm2-2h14V10H5v10Z"></path></svg>
           </td>
-          <td class="py-2 px-4">23/04-2023</td>
-          <td class="py-2 px-4">
+          <td>23/04-2023</td>
+          <td>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M14.55 16.55L11 13V8h2v4.175l2.95 2.95l-1.4 1.425ZM11 6V4h2v2h-2Zm7 7v-2h2v2h-2Zm-7 7v-2h2v2h-2Zm-7-7v-2h2v2H4Zm8 9q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Zm0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20Zm0-8Z"></path></svg>
           </td>
-          <td class="py-2 px-4">19:00</td>
-          <!-- <td class="py-2 px-4">
+          <td>19:00</td>
+          <!-- <td>
             <button class="bg-primary-color text-brand-color font-medium py-2 px-4">Book byvandring</button>
           </td> -->
         </tr>
@@ -58,7 +58,9 @@ import ByvandringSpoegelseOversigt from "../components/ByvandringSpoegelseOversi
     background-color: rgba(248, 246, 242, 0.16) !important;
   }
 
-  th {
-    font-weight: 500 !important;
+  th,
+  td {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-weight: 400 !important;
   }
 </style>
