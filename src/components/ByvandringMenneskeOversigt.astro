@@ -1,0 +1,33 @@
+---
+import ByvandringDetaljer from "./ByvandringDetaljer.astro";
+import ByvandringAfgange from "./ByvandringAfgange.astro";
+---
+
+<h2 class="text-xxlarge font-bold pt-large md:pt-xxlarge pb-large">Menneskeskæbner</h2>
+<section class="grid md:grid-cols-2 gap-16 max-w-screen-lg mx-auto">
+  <ByvandringDetaljer turNavn="Menneskeskæbner" timer="1" minutter="15" distance="1.5" start="Vor Frue Kirke" slut="Nyhavn" voksenPris="120" barnPris="60">
+    <img class="w-full" src="imgs/ghosttour_menneskeskaebnertur_01.webp" alt="" />
+  </ByvandringDetaljer>
+
+  <table class="col-span-1 h-min">
+    <thead>
+      <tr class="text-tertiary-color font-dm-sans items-start text-left bg-primary-color bg-opacity-[16%]">
+        <th class="py-small px-base"></th>
+        <th class="py-small px-base">Dato</th>
+        <th class="py-small px-base"></th>
+        <th class="py-small px-base">Klokkeslet</th>
+      </tr>
+    </thead>
+    <tbody class="w-full">
+      <ByvandringAfgange dato="30/06-2023" klokkeslet="19:30" />
+      <ByvandringAfgange dato="23/06-2023" klokkeslet="19:30" />
+      <ByvandringAfgange dato="16/06-2023" klokkeslet="19:30" />
+      <ByvandringAfgange dato="09/06-2023" klokkeslet="19:30" />
+      <ByvandringAfgange dato="02/06-2023" klokkeslet="19:30" />
+      <ByvandringAfgange dato="26/05-2023" klokkeslet="19:30" />
+      <ByvandringAfgange dato="19/05-2023" klokkeslet="19:30" />
+      <ByvandringAfgange dato="12/05-2023" klokkeslet="19:30" />
+      <ByvandringAfgange dato="05/05-2023" klokkeslet="19:30" />
+    </tbody>
+  </table>
+</section>
