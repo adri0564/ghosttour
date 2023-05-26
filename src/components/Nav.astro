@@ -10,14 +10,17 @@
     <li><a href="/english">In English</a></li>
   </ul>
 </nav> -->
-<nav class="w-full sticky top-0 md:pt-base md:top-auto right-0">
-  <button class="block md:hidden" id="menu-toggle">
+<nav class="w-full sticky top-0 md:pt-base md:top-auto right-0 grid grid-cols-2 md:grid-cols-1">
+  <a class="block md:hidden" href="/"><img class="h-xlarge w-auto pt-small" src="imgs/ghosttour_logo.svg" alt="Ghosttours uofficielle logo lavet i maj 2023" /></a>
+  <button class="block md:hidden justify-self-end" id="menu-toggle">
     <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24">
       <path fill="#f8f6f2" d="M3 18v-2h18v2H3Zm0-5v-2h18v2H3Zm0-5V6h18v2H3Z"></path>
     </svg>
   </button>
-  <ul class="justify-end md:flex md:justify-between text-xxlarge md:text-xlarge font-dm-sans md:font-special-elite bg-transparent" id="menu">
-    <li class="text-primary-color"><a href="/">Ghosttour</a></li>
+
+  <ul class="justify-end md:flex md:justify-between text-xxlarge md:text-xlarge font-dm-sans md:font-special-elite" id="menu">
+    <li class="hidden md:block"><a href="/"><img class="h-10 w-auto" src="imgs/ghosttour_logo_2023.svg" alt="Ghosttours uofficielle logo lavet i maj 2023" /></a></li>
+
     <li><a href="/byvandringer">Byvandringer</a></li>
     <li><a href="/booking">Booking</a></li>
     <li><a href="/omos">Om os</a></li>
