@@ -5,9 +5,12 @@ import HighlightCard from "./HighlightCard.astro";
 <h2 class="text-xxlarge font-bold pt-xxxlarge pb-large">Udvalgte byvandringer</h2>
 
 <section class="grid md:grid-cols-3 gap-xlarge max-w-screen-lg mx-auto">
-  <HighlightCard tourTitle="Spøgelsestur" summary="Få kendskab til Københavns skjulte spøgelseshistorier. Oplev spøgelsernes ånder i Det Grønlandske Hus, føl sulten i Gjeddegården og udforsk byens ældste kirkegård.">
-    <img class="w-full" src="imgs/ghosttour_spoegelsestur_02.webp" alt="stemningsfyldt fotografi som passer til byvandring om spøgelser" />
-  </HighlightCard>
+  <a href="/spoegelsestur">
+    <HighlightCard tourTitle="Spøgelsestur" summary="Få kendskab til Københavns skjulte spøgelseshistorier. Oplev spøgelsernes ånder i Det Grønlandske Hus, føl sulten i Gjeddegården og udforsk byens ældste kirkegård.">
+      <img class="w-full" src="imgs/ghosttour_spoegelsestur_02.webp" alt="stemningsfyldt fotografi som passer til byvandring om spøgelser" />
+    </HighlightCard></a
+  >
+
   <HighlightCard tourTitle="Natmandstur" summary="Opdag den glemte historie om natmændene i København - et parallelsamfund af udstødte. Makabre opgaver, indædte magtkampe og en forsvundet sang, der nu genlyder.">
     <img class="w-full" src="imgs/ghosttour_natmandstur_02.webp" alt="stemningsfyldt fotografi som passer til byvandring om natmænd" />
   </HighlightCard>

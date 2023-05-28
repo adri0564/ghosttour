@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         "dm-sans": ["DM Sans", "sans-serif"],
         "special-elite": ["Special Elite", "cursive"],
+        brockscript: ["brockscript", "serif"],
       },
       fontWeight: {
         regular: 400,

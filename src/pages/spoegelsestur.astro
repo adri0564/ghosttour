@@ -1,59 +1,105 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
+import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
 ---
 
-<MainLayout title="Spoegelsestur">
-  <section class="grid grid-cols-8 text-black">
-    <article class="col-span-2 col-start-3 h-60 w-60">
-      <div id="typewriter" class="typewriter"></div>
-    </article>
+<WebfeatureLayout title="Spoegelsestur">
+  <section class="grid md:grid-cols-2 gap-large pt-large md:pt-xxlarge sticky top-0 min-h-[150vh]">
+    <!-- <div class="grid gap-large"> -->
+    <h1 id="typewriter" class="pt-large md:pt-xxlarge typewriter font-special-elite text-primary-color font-bold text-[44px] sm:text-[68px] md:text-xxxxlarge leading-none"></h1>
+    <p class="pt-large md:pt-xxlarge md:text-xlarge text-large leading-normal slideup">Ghosttour har gravet nogle af Københavns gamle og nyere spøgelseshistorier frem</p>
+    <!-- </div> -->
   </section>
-</MainLayout>
+  <section class="grid md:grid-cols-3 gap-xlarge max-w-screen-lg mx-auto font-brockscript sticky top-0">
+    <p class="md:text-xlarge text-large leading-normal notes01 text-black -rotate-3 p-large pb-xxlarge h-max">Historier der lå gemt i de gamle arkiver og hos nogle af byens indbyggere.</p>
+    <p class="md:text-xlarge text-large leading-normal notes02 text-black rotate-2 p-large pb-xxlarge md:mt-xxlarge">Det viser sig at det vrimler med spøgelser i København.</p>
+  </section>
 
-<style>
-  @keyframes typewriter-animation {
-    from {
-      width: 0;
+  <style>
+    /* IMPORT FONT */
+    @font-face {
+      font-family: "Brockscript";
+      src: url("/brockscript_font/brockscript-regular-webfont.woff") format("woff");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
     }
-  }
 
-  .typewriter {
-    white-space: pre-line;
-    overflow: hidden;
-    animation: typewriter-animation 5s steps(40) forwards;
-    background-image: url(/imgs/white_paper_bg.webp);
-  }
-</style>
-
-<script>
-  const typewriterElement = document.getElementById("typewriter");
-  const text = "Hør historier om helt almindelige menneskers oplevelser med spøgelser"; // Custom tekst
-
-  function setTextWithTypewriterEffect() {
-    let index = 0;
-    let typewriterText = "";
-
-    function typeWriter() {
-      typewriterText += text.charAt(index);
-      typewriterElement.textContent = typewriterText;
-      index++;
-
-      if (index < text.length) {
-        setTimeout(typeWriter, 100); // Hastigheden på skrivemaskineeffekten (i millisekunder)
+    /* h1 SPØGELSESTUR ANIMATION CSS */
+    @keyframes typewriter-animation {
+      from {
+        width: 0;
       }
     }
 
-    setTimeout(typeWriter, 1000); // Start skrivemaskineeffekten efter 1 sekunder
-  }
-
-  // Lyt efter scroll-begivenheden og udfør funktionen, når elementet er synligt på skærmen
-  window.addEventListener("scroll", function () {
-    const rect = typewriterElement.getBoundingClientRect();
-    const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
-
-    if (isVisible) {
-      setTextWithTypewriterEffect();
-      window.removeEventListener("scroll", arguments.callee);
+    .typewriter {
+      white-space: pre-line;
+      overflow: hidden;
+      animation: typewriter-animation 5s steps(40) forwards;
     }
-  });
-</script>
+
+    .notes01 {
+      background-image: url("imgs/white_paper_bg_02.webp");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .notes02 {
+      background-image: url("imgs/white_paper_bg_04.webp");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .notes03 {
+      background-image: url("imgs/white_paper_bg_01.webp");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .notes04 {
+      background-image: url("imgs/white_paper_bg_03.webp");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
+
+  <script>
+    /* Import af Motion One bibliotek */
+    import { animate, stagger, inView, scroll, timeline } from "motion";
+    /* p INTRO TEKST ANIMATION */
+    inView(".slideup", () => {
+      animate(".slideup", { y: [800, 0], opacity: [0, 1] }, { duration: 2 });
+    });
+
+    /* h1 SPØGELSESTUR ANIMATION JavaScript */
+    const typewriterElement = document.getElementById("typewriter");
+    const text = "Spøgelsestur"; // Custom tekst
+
+    function setTextWithTypewriterEffect() {
+      let index = 0;
+      let typewriterText = "";
+
+      function typeWriter() {
+        typewriterText += text.charAt(index);
+        typewriterElement.textContent = typewriterText;
+        index++;
+
+        if (index < text.length) {
+          setTimeout(typeWriter, 100); // Hastigheden på skrivemaskineeffekten (i millisekunder)
+        }
+      }
+
+      setTimeout(typeWriter, 1000); // Start skrivemaskineeffekten efter 1 sekunder
+    }
+
+    // Lyt efter scroll-begivenheden og udfør funktionen, når elementet er synligt på skærmen
+    window.addEventListener("scroll", function scrollHandler() {
+      const rect = typewriterElement.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+
+      if (isVisible) {
+        setTextWithTypewriterEffect();
+        window.removeEventListener("scroll", scrollHandler);
+      }
+    });
+  </script>
+</WebfeatureLayout>
