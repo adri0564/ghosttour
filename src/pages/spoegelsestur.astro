@@ -3,103 +3,147 @@ import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
 ---
 
 <WebfeatureLayout title="Spoegelsestur">
-  <section class="grid md:grid-cols-2 gap-large pt-large md:pt-xxlarge sticky top-0 min-h-[150vh]">
-    <!-- <div class="grid gap-large"> -->
-    <h1 id="typewriter" class="pt-large md:pt-xxlarge typewriter font-special-elite text-primary-color font-bold text-[44px] sm:text-[68px] md:text-xxxxlarge leading-none"></h1>
-    <p class="pt-large md:pt-xxlarge md:text-xlarge text-large leading-normal slideup">Ghosttour har gravet nogle af Københavns gamle og nyere spøgelseshistorier frem</p>
-    <!-- </div> -->
+  <section class="grid md:grid-cols-2 gap-large pt-large md:pt-xxlarge sticky top-0 min-h-[180vh]">
+    <h1 id="typewriter" class="pt-large md:pt-xxlarge typewriter font-special-elite text-primary-color text-[44px] sm:text-[68px] md:text-xxxxlarge leading-none"></h1>
+    <p class="pt-large md:pt-xxlarge md:text-xlarge text-large leading-normal slideup font-special-elite">Ghosttour har gravet nogle af Københavns gamle og nyere spøgelseshistorier frem</p>
   </section>
-  <section class="grid md:grid-cols-3 gap-xlarge max-w-screen-lg mx-auto font-brockscript sticky top-0">
-    <p class="md:text-xlarge text-large leading-normal notes01 text-black -rotate-3 p-large pb-xxlarge h-max">Historier der lå gemt i de gamle arkiver og hos nogle af byens indbyggere.</p>
-    <p class="md:text-xlarge text-large leading-normal notes02 text-black rotate-2 p-large pb-xxlarge md:mt-xxlarge">Det viser sig at det vrimler med spøgelser i København.</p>
+  <section class="grid md:grid-cols-2 gap-large pt-large md:pt-xxlarge sticky top-0 min-h-[80vh] bg-secondary-color"></section>
+
+  <section class="mx-auto max-w-screen-lg overflow-clip">
+    <article id="horisontalscrollsection" class="h-[400vh] relative">
+      <ul id="horisontalliste" class="list-none flex sticky top-0">
+        <li class="flex h-[100vh] w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto p-large"><p class="md:text-xxlarge text-xlarge leading-normal notes01 text-secondary-color -rotate-3 p-large pb-xxlarge h-max font-brockscript transition-transform w-[400px]">Historier der lå gemt i de gamle arkiver og hos nogle af byens indbyggere.</p></li>
+        <li class="flex h-[100vh] w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto p-large"><p class="md:text-xxlarge text-xlarge leading-normal notes02 text-secondary-color p-large pb-xxlarge md:mt-xxlarge h-max font-brockscript w-[400px]">Det viser sig at det vrimler med spøgelser i København.</p></li>
+        <li class="flex h-[100vh] w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto p-large">
+          <section class="grid md:grid-cols-3 gap-large max-w-screen-lg font-special-elite sticky top-0">
+            <img class="w-[600px] h-[450px] rotate-2" src="imgs/ghosttour_lygte.webp" alt="Lygten som omtales i Ghosttour's Spøgelsestur tekst" />
+
+            <p class="col-span-2 md:text-xlarge text-large leading-normal text-primary-color p-large pb-xxlarge md:mt-xxlarge">I skæret fra staldlygten tager Ghosttour dig med på en byvandring til nogle af de steder i byen som har med spøgelser at gøre.</p>
+          </section>
+        </li>
+      </ul>
+    </article>
   </section>
 
-  <style>
-    /* IMPORT FONT */
-    @font-face {
-      font-family: "Brockscript";
-      src: url("/brockscript_font/brockscript-regular-webfont.woff") format("woff");
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
+  <section class="mx-auto scrollzoom overflow-clip sticky top-0 slideup2">
+    <img src="imgs/ghosttour_hus_gullig.webp" class="scrollzoomimg w-full" alt="Ældre fotografi af hus i København. Sandsynligvis Christianshavn." />
+    <article class="grid md:grid-cols-3 gap-large max-w-screen-lg font-special-elite pt-xxxlarge mx-auto">
+      <img class="w-[600px] h-[450px]" src="imgs/ghosttour_gade.webp" alt="Foto af det gamle København med Vor Frue Kirke i baggrunden. Højst sandsynligvis Gammeltorv." />
 
-    /* h1 SPØGELSESTUR ANIMATION CSS */
-    @keyframes typewriter-animation {
-      from {
-        width: 0;
-      }
-    }
-
-    .typewriter {
-      white-space: pre-line;
-      overflow: hidden;
-      animation: typewriter-animation 5s steps(40) forwards;
-    }
-
-    .notes01 {
-      background-image: url("imgs/white_paper_bg_02.webp");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    .notes02 {
-      background-image: url("imgs/white_paper_bg_04.webp");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    .notes03 {
-      background-image: url("imgs/white_paper_bg_01.webp");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    .notes04 {
-      background-image: url("imgs/white_paper_bg_03.webp");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-  </style>
-
-  <script>
-    /* Import af Motion One bibliotek */
-    import { animate, stagger, inView, scroll, timeline } from "motion";
-    /* p INTRO TEKST ANIMATION */
-    inView(".slideup", () => {
-      animate(".slideup", { y: [800, 0], opacity: [0, 1] }, { duration: 2 });
-    });
-
-    /* h1 SPØGELSESTUR ANIMATION JavaScript */
-    const typewriterElement = document.getElementById("typewriter");
-    const text = "Spøgelsestur"; // Custom tekst
-
-    function setTextWithTypewriterEffect() {
-      let index = 0;
-      let typewriterText = "";
-
-      function typeWriter() {
-        typewriterText += text.charAt(index);
-        typewriterElement.textContent = typewriterText;
-        index++;
-
-        if (index < text.length) {
-          setTimeout(typeWriter, 100); // Hastigheden på skrivemaskineeffekten (i millisekunder)
-        }
-      }
-
-      setTimeout(typeWriter, 1000); // Start skrivemaskineeffekten efter 1 sekunder
-    }
-
-    // Lyt efter scroll-begivenheden og udfør funktionen, når elementet er synligt på skærmen
-    window.addEventListener("scroll", function scrollHandler() {
-      const rect = typewriterElement.getBoundingClientRect();
-      const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
-
-      if (isVisible) {
-        setTextWithTypewriterEffect();
-        window.removeEventListener("scroll", scrollHandler);
-      }
-    });
-  </script>
+      <p class="col-span-2 md:text-xlarge text-large leading-normal text-primary-color p-large pb-xxlarge md:mt-xxlarge">Hør historier om helt almindelige menneskers oplevelser med spøgelser og se gamle bygninger, hvor danske helte og berømtheder har holdt til - og måske er de der stadigvæk?</p>
+    </article>
+  </section>
 </WebfeatureLayout>
+
+<!-- <section class="grid md:grid-cols-3 gap-xlarge max-w-screen-lg mx-auto font-brockscript sticky top-0 bg-secondary-color min-h-[150vh]">
+      <p class="md:text-xlarge text-large leading-normal notes01 text-secondary-color -rotate-3 p-large pb-xxlarge h-max">Historier der lå gemt i de gamle arkiver og hos nogle af byens indbyggere.</p>
+      <p class="md:text-xlarge text-large leading-normal notes02 text-secondary-color rotate-2 p-large pb-xxlarge md:mt-xxlarge h-max">Det viser sig at det vrimler med spøgelser i København.</p>
+    </section>
+    <section class="grid md:grid-cols-3 gap-xlarge max-w-screen-lg mx-auto font-special-elite sticky top-0">
+      <img src="imgs/ghosttour_gadelampe.webp" alt="" />
+
+      <p class="md:text-xlarge text-large leading-normal text-primary-color p-large pb-xxlarge md:mt-xxlarge">I skæret fra staldlygten tager Ghosttour dig med på en byvandring til nogle af de steder i byen som har med spøgelser at gøre.</p>
+    </section> -->
+
+<style>
+  /* IMPORT FONT */
+  @font-face {
+    font-family: "Brockscript";
+    src: url("/brockscript_font/brockscript-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* h1 SPØGELSESTUR ANIMATION CSS */
+  @keyframes typewriter-animation {
+    from {
+      width: 0;
+    }
+  }
+
+  .typewriter {
+    white-space: pre-line;
+    overflow: hidden;
+    animation: typewriter-animation 5s steps(40) forwards;
+  }
+
+  .notes01 {
+    background-image: url("imgs/stained_paper_01.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .notes02 {
+    background-image: url("imgs/stained_paper_02.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
+
+<script>
+  /* Import af Motion One bibliotek */
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+
+  /* p INTRO TEKST ANIMATION */
+  inView(".slideup", () => {
+    animate(".slideup", { y: [800, 0], opacity: [0, 1] }, { duration: 2 });
+  });
+
+  /* Section 4 ANIMATION */
+  inView(".slideup2", () => {
+    animate(".slideup2", { y: [800, 0], opacity: [0, 1] }, { duration: 2 });
+  });
+
+  /* h1 SPØGELSESTUR ANIMATION JavaScript */
+  const typewriterElement = document.getElementById("typewriter");
+  const text = "Spøgelsestur"; // Custom tekst
+
+  function setTextWithTypewriterEffect() {
+    let index = 0;
+    let typewriterText = "";
+
+    function typeWriter() {
+      typewriterText += text.charAt(index);
+      typewriterElement.textContent = typewriterText;
+      index++;
+
+      if (index < text.length) {
+        setTimeout(typeWriter, 100); // Hastigheden på skrivemaskineeffekten (i millisekunder)
+      }
+    }
+
+    setTimeout(typeWriter, 1000); // Start skrivemaskineeffekten efter 1 sekunder
+  }
+
+  // Lyt efter scroll-begivenheden og udfør funktionen, når elementet er synligt på skærmen
+  window.addEventListener("scroll", function scrollHandler() {
+    const rect = typewriterElement.getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+
+    if (isVisible) {
+      setTextWithTypewriterEffect();
+      window.removeEventListener("scroll", scrollHandler);
+    }
+  });
+
+  // HORISONTAL SCROLL
+  const items = document.querySelectorAll("#horisontalliste li");
+  scroll(
+    animate("#horisontalliste", {
+      transform: ["none", `translateX(-${items.length - 1}00vw)`],
+    }),
+    { target: document.querySelector("#horisontalscrollsection") }
+  );
+
+  //IMG ZOOM SCROLL
+  scroll(
+    animate(".scrollzoomimg", {
+      scale: [1, 1.4],
+    }),
+    {
+      target: document.querySelector(".scrollzoom"),
+      offset: ["0.2 0.2", "0.6 0.6"],
+    }
+  );
+</script>
