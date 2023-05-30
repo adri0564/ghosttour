@@ -8,11 +8,13 @@ module.exports = {
         "special-elite": ["Special Elite", "cursive"],
         brockscript: ["brockscript", "serif"],
       },
+
       fontWeight: {
         regular: 400,
         medium: 500,
         bold: 700,
       },
+
       fontSize: {
         small: "15px",
         base: "18px",
