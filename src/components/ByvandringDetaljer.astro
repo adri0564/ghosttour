@@ -1,21 +1,22 @@
 ---
 const { timer, minutter, distance, start, slut, voksenPris, barnPris } = Astro.props;
 ---
-
+<div itemscope itemtype="SocialEvent">
 <section class="text-small">
+
   <slot />
   <article class="grid sm:grid-cols-2">
     <div class="tur-info">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z"></path></svg>
-      <p class="pt-small">Start: {start}</p>
+      <p itemprop="location" class="pt-small">Start: {start}</p>
     </div>
     <div class="tur-info">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z"></path></svg>
-      <p class="pt-small">Slut: {slut}</p>
+      <p itemprop="location" class="pt-small">Slut: {slut}</p>
     </div>
     <div class="tur-info">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M14.55 16.55L11 13V8h2v4.175l2.95 2.95l-1.4 1.425ZM11 6V4h2v2h-2Zm7 7v-2h2v2h-2Zm-7 7v-2h2v2h-2Zm-7-7v-2h2v2H4Zm8 9q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Zm0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20Zm0-8Z"></path></svg>
-      <p class="pt-small">Varighed: {timer} t. og {minutter} min.</p>
+      <p itemprop="duration" class="pt-small">Varighed: {timer} t. og {minutter} min.</p>
     </div>
     <div class="tur-info">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M7 23L9.8 8.9L8 9.6V13H6V8.3l5.05-2.15q.35-.15.738-.175t.737.1q.35.125.663.35T13.7 7l1 1.6q.65 1.05 1.763 1.725T19 11v2q-1.75 0-3.125-.725t-2.35-1.85L12.9 13.5l2.1 2V23h-2v-6.5l-2.1-1.6L9.1 23H7Zm6.5-17.5q-.825 0-1.413-.588T11.5 3.5q0-.825.588-1.413T13.5 1.5q.825 0 1.413.588T15.5 3.5q0 .825-.588 1.413T13.5 5.5Z"></path></svg>
@@ -30,6 +31,7 @@ const { timer, minutter, distance, start, slut, voksenPris, barnPris } = Astro.p
       <p class="pt-small">Barn: {barnPris} kr.</p>
     </div>
   </article>
+  </div>
 
   <!-- <div class="flex gap-large">
     <div class="tur-info">
