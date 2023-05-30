@@ -1,37 +1,44 @@
 ---
-const { timer, minutter, distance, start, slut, voksenPris, barnPris } = Astro.props;
+const { byvandringNavn, byvandringDescription, timer, minutter, distance, start, slut, voksenPris, barnPris } = Astro.props;
 ---
-<div itemscope itemtype="SocialEvent">
-<section class="text-small">
 
-  <slot />
-  <article class="grid sm:grid-cols-2">
-    <div class="tur-info">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z"></path></svg>
-      <p itemprop="location" class="pt-small">Start: {start}</p>
-    </div>
-    <div class="tur-info">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z"></path></svg>
-      <p itemprop="location" class="pt-small">Slut: {slut}</p>
-    </div>
-    <div class="tur-info">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M14.55 16.55L11 13V8h2v4.175l2.95 2.95l-1.4 1.425ZM11 6V4h2v2h-2Zm7 7v-2h2v2h-2Zm-7 7v-2h2v2h-2Zm-7-7v-2h2v2H4Zm8 9q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Zm0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20Zm0-8Z"></path></svg>
-      <p itemprop="duration" class="pt-small">Varighed: {timer} t. og {minutter} min.</p>
-    </div>
-    <div class="tur-info">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M7 23L9.8 8.9L8 9.6V13H6V8.3l5.05-2.15q.35-.15.738-.175t.737.1q.35.125.663.35T13.7 7l1 1.6q.65 1.05 1.763 1.725T19 11v2q-1.75 0-3.125-.725t-2.35-1.85L12.9 13.5l2.1 2V23h-2v-6.5l-2.1-1.6L9.1 23H7Zm6.5-17.5q-.825 0-1.413-.588T11.5 3.5q0-.825.588-1.413T13.5 1.5q.825 0 1.413.588T15.5 3.5q0 .825-.588 1.413T13.5 5.5Z"></path></svg>
-      <p class="pt-small">Distance: {distance} km.</p>
-    </div>
-    <div class="tur-info">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M12 12q-1.65 0-1.825-1.175T8 8q0-1.65 1.175-2.825T12 4q1.65 0 2.825 1.175T16 8q0 1.65-1.175 2.825T12 12Zm-8 8v-2.8q0-.85.438-1.563T5.6 14.55q1.55-.775 3.15-1.163T12 13q1.65 0 3.25.388t3.15 1.162q.725.375 1.163 1.088T20 17.2V20H4Z"></path></svg>
-      <p class="pt-small">Voksen: {voksenPris} kr.</p>
-    </div>
-    <div class="tur-info">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M17 15q-1.05 0-1.775-.725T14.5 12.5q0-1.05.725-1.775T17 10q1.05 0 1.775.725T19.5 12.5q0 1.05-.725 1.775T17 15Zm-5 5v-1.4q0-.6.313-1.113t.887-.737q.9-.375 1.863-.563T17 16q.975 0 1.938.188t1.862.562q.575.225.888.738T22 18.6V20H12Zm-2-8q-1.65 0-2.825-1.175T6 8q0-1.65 1.175-2.825T10 4q1.65 0 2.825 1.175T14 8q0 1.65-1.175 2.825T10 12Zm0-4ZM2 20v-2.8q0-.85.425-1.563T3.6 14.55q1.5-.75 3.112-1.15T10 13q.875 0 1.75.15t1.75.35l-.85.85l-.85.85q-.45-.125-.9-.163T10 15q-1.45 0-2.838.35t-2.662 1q-.25.125-.375.35T4 17.2v.8h6v2H2Zm8-2Zm0-8q.825 0 1.413-.588T12 8q0-.825-.588-1.413T10 6q-.825 0-1.413.588T8 8q0 .825.588 1.413T10 10Z"></path></svg>
-      <p class="pt-small">Barn: {barnPris} kr.</p>
-    </div>
+<section class="col-span-2">
+  <article>
+    <h2 class="text-xxlarge font-bold pt-large md:pt-xxlarge">{byvandringNavn}</h2>
+    <p class="leading-normal pt-small">{byvandringDescription}</p>
   </article>
-  </div>
+</section>
+<div itemscope itemtype="SocialEvent">
+  <section class="text-small sm:grid-cols-2">
+    <slot />
+
+    <article class="grid sm:grid-cols-2">
+      <div class="tur-info">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z"></path></svg>
+        <p itemprop="location" class="pt-small">Start: {start}</p>
+      </div>
+      <div class="tur-info">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z"></path></svg>
+        <p itemprop="location" class="pt-small">Slut: {slut}</p>
+      </div>
+      <div class="tur-info">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M14.55 16.55L11 13V8h2v4.175l2.95 2.95l-1.4 1.425ZM11 6V4h2v2h-2Zm7 7v-2h2v2h-2Zm-7 7v-2h2v2h-2Zm-7-7v-2h2v2H4Zm8 9q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Zm0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20Zm0-8Z"></path></svg>
+        <p itemprop="duration" class="pt-small">Varighed: {timer} t. og {minutter} min.</p>
+      </div>
+      <div class="tur-info">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M7 23L9.8 8.9L8 9.6V13H6V8.3l5.05-2.15q.35-.15.738-.175t.737.1q.35.125.663.35T13.7 7l1 1.6q.65 1.05 1.763 1.725T19 11v2q-1.75 0-3.125-.725t-2.35-1.85L12.9 13.5l2.1 2V23h-2v-6.5l-2.1-1.6L9.1 23H7Zm6.5-17.5q-.825 0-1.413-.588T11.5 3.5q0-.825.588-1.413T13.5 1.5q.825 0 1.413.588T15.5 3.5q0 .825-.588 1.413T13.5 5.5Z"></path></svg>
+        <p class="pt-small">Distance: {distance} km.</p>
+      </div>
+      <div class="tur-info">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M12 12q-1.65 0-1.825-1.175T8 8q0-1.65 1.175-2.825T12 4q1.65 0 2.825 1.175T16 8q0 1.65-1.175 2.825T12 12Zm-8 8v-2.8q0-.85.438-1.563T5.6 14.55q1.55-.775 3.15-1.163T12 13q1.65 0 3.25.388t3.15 1.162q.725.375 1.163 1.088T20 17.2V20H4Z"></path></svg>
+        <p class="pt-small">Voksen: {voksenPris} kr.</p>
+      </div>
+      <div class="tur-info">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f8f6f2" d="M17 15q-1.05 0-1.775-.725T14.5 12.5q0-1.05.725-1.775T17 10q1.05 0 1.775.725T19.5 12.5q0 1.05-.725 1.775T17 15Zm-5 5v-1.4q0-.6.313-1.113t.887-.737q.9-.375 1.863-.563T17 16q.975 0 1.938.188t1.862.562q.575.225.888.738T22 18.6V20H12Zm-2-8q-1.65 0-2.825-1.175T6 8q0-1.65 1.175-2.825T10 4q1.65 0 2.825 1.175T14 8q0 1.65-1.175 2.825T10 12Zm0-4ZM2 20v-2.8q0-.85.425-1.563T3.6 14.55q1.5-.75 3.112-1.15T10 13q.875 0 1.75.15t1.75.35l-.85.85l-.85.85q-.45-.125-.9-.163T10 15q-1.45 0-2.838.35t-2.662 1q-.25.125-.375.35T4 17.2v.8h6v2H2Zm8-2Zm0-8q.825 0 1.413-.588T12 8q0-.825-.588-1.413T10 6q-.825 0-1.413.588T8 8q0 .825.588 1.413T10 10Z"></path></svg>
+        <p class="pt-small">Barn: {barnPris} kr.</p>
+      </div>
+    </article>
+  </section>
 
   <!-- <div class="flex gap-large">
     <div class="tur-info">
@@ -63,7 +70,7 @@ const { timer, minutter, distance, start, slut, voksenPris, barnPris } = Astro.p
       <p class="pt-small">Barn: {barnPris} kr.</p>
     </div>
   </div> -->
-</section>
+</div>
 
 <style>
   .tur-info {
