@@ -25,12 +25,21 @@ import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
     </article>
   </section>
 
-  <section class="mx-auto scrollzoom overflow-clip sticky top-0 slideup2">
+  <section class="mx-auto scrollzoom sticky top-0 slideup2">
     <img src="imgs/ghosttour_hus_gullig.webp" class="scrollzoomimg w-full" alt="Ældre fotografi af hus i København. Sandsynligvis Christianshavn." />
     <article class="grid md:grid-cols-3 gap-large max-w-screen-lg font-special-elite pt-xxxlarge mx-auto">
       <img class="w-[600px] h-[450px]" src="imgs/ghosttour_gade.webp" alt="Foto af det gamle København med Vor Frue Kirke i baggrunden. Højst sandsynligvis Gammeltorv." />
 
       <p class="col-span-2 md:text-xlarge text-large leading-normal text-primary-color p-large pb-xxlarge md:mt-xxlarge">Hør historier om helt almindelige menneskers oplevelser med spøgelser og se gamle bygninger, hvor danske helte og berømtheder har holdt til - og måske er de der stadigvæk?</p>
+    </article>
+    <h2 class="max-w-screen-lg mx-auto pt-large md:pt-xxlarge typewriter font-special-elite text-primary-color text-[44px] sm:text-[68px] md:text-xxxxlarge leading-none pb-xxlarge md:pb-xxxlarge">Se gamle gader og bygninger i nyt lys</h2>
+
+    <article class="max-w-screen-lg mx-auto">
+      <ul class="grid md:grid-cols-3 gap-xlarge staggeranimation">
+        <li class="justify-center p-large"><p class="md:text-xxlarge text-xlarge leading-normal notes01 text-secondary-color -rotate-3 p-large pb-xxlarge h-max font-brockscript w-[300px]">Få historien om ånderne i Det Grønlandske Hus.</p></li>
+        <li class="justify-center p-large"><p class="md:text-xxlarge text-xlarge leading-normal notes02 text-secondary-color p-large pb-xxlarge md:mt-xxlarge h-max font-brockscript w-[300px]">Mærk sulten hos den lille, døde 8 årige pige i Gjeddegården.</p></li>
+        <li class="justify-center p-large"><p class="md:text-xxlarge text-xlarge leading-normal notes02 text-secondary-color rotate-1 p-large pb-xxlarge md:mt-xlarge h-max font-brockscript w-[300px]">kom med på byens ældste kirkegård.</p></li>
+      </ul>
     </article>
   </section>
 </WebfeatureLayout>
@@ -146,4 +155,9 @@ import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
       offset: ["0.2 0.2", "0.6 0.6"],
     }
   );
+
+  //STAGGER ANIMATE
+  inView(".staggeranimation", ({ target }) => {
+    animate(target.querySelectorAll("li"), { opacity: [0, 1] }, { duration: 1, delay: stagger(1.5, { start: 0.5 }) });
+  });
 </script>
