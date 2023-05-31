@@ -16,7 +16,7 @@ import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
         <li class="flex h-[100vh] w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto p-large"><p class="md:text-xxlarge text-xlarge leading-normal notes02 text-secondary-color p-large pb-xxlarge md:mt-xxlarge h-max font-brockscript w-[400px]">Det viser sig at det vrimler med spøgelser i København.</p></li>
         <li class="flex h-[100vh] w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto p-large">
           <section class="grid md:grid-cols-3 gap-large max-w-screen-lg font-special-elite sticky top-0">
-            <img class="w-[600px] h-[450px] rotate-2" src="imgs/ghosttour_lygte.webp" alt="Lygten som omtales i Ghosttour's Spøgelsestur tekst" />
+            <img class="w-[600px] h-[450px] rotate-2" src="/imgs/ghosttour_lygte.webp" alt="Lygten som omtales i Ghosttour's Spøgelsestur tekst" />
 
             <p class="col-span-2 md:text-xlarge text-large leading-normal text-primary-color p-large pb-xxlarge md:mt-xxlarge">I skæret fra staldlygten tager Ghosttour dig med på en byvandring til nogle af de steder i byen som har med spøgelser at gøre.</p>
           </section>
@@ -26,9 +26,9 @@ import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
   </section>
 
   <section class="mx-auto scrollzoom sticky top-0 slideup2">
-    <img src="imgs/ghosttour_hus_gullig.webp" class="scrollzoomimg w-full" alt="Ældre fotografi af hus i København. Sandsynligvis Christianshavn." />
+    <img src="/imgs/ghosttour_hus_gullig.webp" class="scrollzoomimg w-full" alt="Ældre fotografi af hus i København. Sandsynligvis Christianshavn." />
     <article class="grid md:grid-cols-3 gap-large max-w-screen-lg font-special-elite pt-xxxlarge mx-auto">
-      <img class="w-[600px] h-[450px]" src="imgs/ghosttour_gade.webp" alt="Foto af det gamle København med Vor Frue Kirke i baggrunden. Højst sandsynligvis Gammeltorv." />
+      <img class="w-[600px] h-[450px]" src="/imgs/ghosttour_gade.webp" alt="Foto af det gamle København med Vor Frue Kirke i baggrunden. Højst sandsynligvis Gammeltorv." />
 
       <p class="col-span-2 md:text-xlarge text-large leading-normal text-primary-color p-large pb-xxlarge md:mt-xxlarge">Hør historier om helt almindelige menneskers oplevelser med spøgelser og se gamle bygninger, hvor danske helte og berømtheder har holdt til - og måske er de der stadigvæk?</p>
     </article>
@@ -49,7 +49,7 @@ import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
       <p class="md:text-xlarge text-large leading-normal notes02 text-secondary-color rotate-2 p-large pb-xxlarge md:mt-xxlarge h-max">Det viser sig at det vrimler med spøgelser i København.</p>
     </section>
     <section class="grid md:grid-cols-3 gap-xlarge max-w-screen-lg mx-auto font-special-elite sticky top-0">
-      <img src="imgs/ghosttour_gadelampe.webp" alt="" />
+      <img src="/imgs/ghosttour_gadelampe.webp" alt="" />
 
       <p class="md:text-xlarge text-large leading-normal text-primary-color p-large pb-xxlarge md:mt-xxlarge">I skæret fra staldlygten tager Ghosttour dig med på en byvandring til nogle af de steder i byen som har med spøgelser at gøre.</p>
     </section> -->
@@ -78,13 +78,13 @@ import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
   }
 
   .notes01 {
-    background-image: url("imgs/stained_paper_01.webp");
+    background-image: url("/imgs/stained_paper_01.webp");
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   .notes02 {
-    background-image: url("imgs/stained_paper_02.webp");
+    background-image: url("/imgs/stained_paper_02.webp");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -106,7 +106,9 @@ import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
 
   /* h1 SPØGELSESTUR ANIMATION JavaScript */
   const typewriterElement = document.getElementById("typewriter");
-  const text = "Spøgelsestur"; // Custom tekst
+
+  // const text = "Spøgelsestur"; // Custom tekst
+  const text = document.querySelector("h1").textContent; // Custom tekst
 
   function setTextWithTypewriterEffect() {
     let index = 0;
