@@ -1,11 +1,11 @@
 ---
-const { byvandringNavn, byvandringDescription, timer, minutter, distance, start, slut, voksenPris, barnPris } = Astro.props;
+const { byvandringNavn, byvandringReview, timer, minutter, distance, start, slut, voksenPris, barnPris } = Astro.props;
 ---
 
-<section class="col-span-2">
+<section itemscope itemtype="https://schema.org/SocialEvent" class="col-span-2">
   <article>
-    <h2 class="text-xxlarge font-bold pt-large md:pt-xxlarge">{byvandringNavn}</h2>
-    <p class="leading-normal pt-small">{byvandringDescription}</p>
+    <h2 itemprop="name" class="text-xxlarge font-bold pt-large md:pt-xxlarge">{byvandringNavn}</h2>
+    <p itemprop="review" class="leading-normal pt-small">{byvandringReview}</p>
   </article>
 </section>
 <div itemscope itemtype="SocialEvent">

@@ -4,13 +4,12 @@ import ByvandringAfgange from "./ByvandringAfgange.astro";
 ---
 
 <div itemscope itemtype="https://schema.org/SocialEvent">
-  <h2 itemprop="name" class="text-xxlarge font-bold pt-large md:pt-xxlarge pb-large">Spøgelsestur</h2>
-
   <section class="grid md:grid-cols-2 gap-16 max-w-screen-lg mx-auto">
-    <ByvandringDetaljer byvandringNavn="Spøgelsestur" byvandringDescription="Få kendskab til Københavns skjulte spøgelseshistorier. Oplev spøgelsernes ånder i Det Grønlandske Hus, føl sulten i Gjeddegården og udforsk byens ældste kirkegård." timer="1" minutter="30" distance="0.5" start="Gråbrødre Torv" slut="Vestergade" voksenPris="120" barnPris="60">
+    <ByvandringDetaljer byvandringNavn="Spøgelsestur" byvandringReview="Få kendskab til Københavns skjulte spøgelseshistorier. Oplev spøgelsernes ånder i Det Grønlandske Hus, føl sulten i Gjeddegården og udforsk byens ældste kirkegård." timer="1" minutter="30" distance="0.5" start="Gråbrødre Torv" slut="Vestergade" voksenPris="120" barnPris="60">
       <img class="w-full" src="imgs/ghosttour_spoegelsestur_01.webp" alt="Fotografi som præsenterer Ghosttours tur om spøgelser. I modlys ses en silhouette af en person. Er det et spøgelse?" />
     </ByvandringDetaljer>
 
+    <!-- TABEL MED INFO OM AFGANG -->
     <table class="col-span-1 h-min">
       <thead>
         <tr class="text-tertiary-color font-dm-sans items-start text-left bg-primary-color bg-opacity-[16%]">
