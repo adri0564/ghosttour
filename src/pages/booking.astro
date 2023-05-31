@@ -5,7 +5,6 @@ import PageIntro from "../components/PageIntro.astro";
 
 <MainLayout title="Booking">
   <PageIntro pageTitle="Booking" summary="Booking af pladser på de åbne ture skal ske senest kl. 13:00 på dagen. Det er nødvendigt at booke plads på de åbne ture. Ghosttour tager forbehold for aflysninger grundet manglende tilmeldinger, sygdom og meget dårligt vejr." />
-  <h2 class="text-yellow-500">test</h2>
   <!-- <section class="pt-xxlarge max-w-screen-lg mx-auto">
     <form class="font-dm-sans grid md:grid-cols-2">
       <div>
@@ -46,11 +45,85 @@ import PageIntro from "../components/PageIntro.astro";
       </div>
     </form>
   </section> -->
+  <section class="sm:grid-cols-2 grid max-w-screen-lg mx-auto gap-y-base gap-x-xlarge text-secondary-color pt-xlarge">
+    <form>
+      <label>Dit fornavn</label><br />
+      <input class="w-full" type="text" placeholder="Fornavn" inputmode="text" />
+    </form>
 
-  <form><label>Email</label><input type="email" /></form>
+    <form>
+      <label>Dit efternavn</label><br />
+      <input class="w-full" type="text" placeholder="Efternavn" inputmode="text" />
+    </form>
+
+    <form>
+      <label>Dit telefonnummer</label><br />
+      <input class="w-full" type="tel" placeholder="(0045)12345678" inputmode="tel" />
+    </form>
+
+    <form>
+      <label>Din e-mail adresse</label><br />
+      <input class="w-full" type="email" placeholder="eksempel@mail.dk" inputmode="email" />
+    </form>
+
+    <form id="form_byvandring">
+      <label>Vælg en byvandring</label><br />
+
+      <input type="radio" id="spoegelsestur" name="fav_language" value="spoegelsestur" />
+      <label for="spoegelsestur">Spøgelsestur</label><br />
+
+      <input type="radio" id="natmaendstur" name="fav_language" value="natmaendstur" />
+      <label for="natmaendstur">Natmændstur</label><br />
+
+      <input type="radio" id="menneskeskaebner" name="fav_language" value="menneskeskaebner" />
+      <label for="menneskeskaebner">Menneskeskæbner</label>
+    </form>
+
+    <form>
+      <label>Vælg en dato</label><br />
+      <input id="date_placeholder" class="w-full" type="date" />
+    </form>
+
+    <form>
+      <label>Antal voksne</label><br />
+      <input class="w-full" type="number" inputmode="numeric" />
+    </form>
+
+    <form>
+      <label>Antal børn</label><br />
+      <input class="w-full" type="number" inputmode="numeric" />
+    </form>
+
+    <form class="col-span-2">
+      <label>Kommentarer/spørgsmål</label><br />
+      <input class="w-full" type="text" placeholder="Tilføj en kommentar eller et spørgsmål og vi vender tilbage hurtigst muligt." inputmode="text" />
+    </form>
+  </section>
 </MainLayout>
 
 <style>
+  #form_byvandring input {
+    margin: 1rem !important;
+  }
+
+  #date_placeholder {
+    color: #9da3ae;
+  }
+
+  input {
+    margin-top: 0.25rem !important;
+    padding: 0.25rem 1rem !important;
+  }
+
+  label {
+    color: #f8f6f2;
+  }
+
+  /* form {
+    color: turquoise !important;
+    width: max-content;
+  } */
+
   /* form {
     display: grid;
     grid-template-columns: 2;
