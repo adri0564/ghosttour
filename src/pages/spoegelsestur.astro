@@ -7,7 +7,6 @@ import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
     <h1 id="typewriter" class="pt-large md:pt-xxlarge typewriter font-special-elite text-primary-color text-[44px] sm:text-[68px] md:text-xxxxlarge leading-none"></h1>
     <p class="pt-large md:pt-xxlarge md:text-xlarge text-large leading-normal slideup font-special-elite">Ghosttour har gravet nogle af Københavns gamle og nyere spøgelseshistorier frem</p>
   </section>
-  <h2 class="text-yellow-500">test</h2>
 
   <section class="grid md:grid-cols-2 gap-large pt-large md:pt-xxlarge sticky top-0 min-h-[80vh] bg-secondary-color"></section>
 
@@ -42,6 +41,18 @@ import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
         <li class="justify-center p-large"><p class="md:text-xxlarge text-xlarge leading-normal notes02 text-secondary-color p-large pb-xxlarge md:mt-xxlarge h-max font-brockscript w-[300px]">Mærk sulten hos den lille, døde 8 årige pige i Gjeddegården.</p></li>
         <li class="justify-center p-large"><p class="md:text-xxlarge text-xlarge leading-normal notes02 text-secondary-color rotate-1 p-large pb-xxlarge md:mt-xlarge h-max font-brockscript w-[300px]">kom med på byens ældste kirkegård.</p></li>
       </ul>
+    </article>
+
+    <article class="bg-secondary-color sticky top-0 grid grid-cols-2 mx-auto max-w-screen-lg place-items-center">
+      <h2 class="place-items-center col-span-2 max-w-screen-lg mx-auto pt-large md:pt-xxlarge typewriter font-special-elite text-primary-color text-[44px] sm:text-[68px] md:text-xxxxlarge leading-none pb-xxlarge md:pb-xxxlarge">Er der mere mellem himmel og jord?</h2>
+      <button class="place-items-center text-primary-color font-medium text-large flex items-center gap-base py-small pl-large bg-transparent w-max" type="button">
+        <a href="/byvandringer">Tilbage til oversigt</a>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#f8f6f2" d="m12 20l-1.425-1.4l5.6-5.6H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8Z"></path></svg> -->
+      </button>
+      <button class="place-items-center text-brand-color font-medium text-large flex items-center gap-base py-small pl-large pr-20 bg-primary-color w-max" type="button">
+        <a href="/booking">Book din byvandring</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#c01111" d="m12 20l-1.425-1.4l5.6-5.6H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8Z"></path></svg>
+      </button>
     </article>
   </section>
 </WebfeatureLayout>
@@ -90,6 +101,23 @@ import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+  /* BUTTONS */
+  @keyframes moveRightFadeIn {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(64px);
+      opacity: 1;
+    }
+  }
+
+  button svg {
+    animation: moveRightFadeIn 1800ms infinite;
+    animation-delay: 0s;
+  }
 </style>
 
 <script>
@@ -109,8 +137,8 @@ import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
   /* h1 SPØGELSESTUR ANIMATION JavaScript */
   const typewriterElement = document.getElementById("typewriter");
 
-  // const text = "Spøgelsestur"; // Custom tekst
-  const text = document.querySelector("h1").textContent; // Custom tekst
+  const text = "Spøgelsestur"; // Custom tekst
+  // const text = document.querySelector("h1").textContent; // Custom tekst
 
   function setTextWithTypewriterEffect() {
     let index = 0;
