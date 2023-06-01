@@ -3,67 +3,27 @@ import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
 ---
 
 <WebfeatureLayout title="Spoegelsestur">
-  <section
-    class="grid md:grid-cols-2 gap-large pt-large md:pt-xxlarge sticky top-0 min-h-[180vh]"
-  >
-    <h1
-      id="typewriter"
-      class="pt-large md:pt-xxlarge typewriter font-special-elite text-primary-color text-[44px] sm:text-[68px] md:text-xxxxlarge leading-none"
-    >
-    </h1>
-    <p
-      class="pt-large md:pt-xxlarge md:text-xlarge text-large leading-normal slideup font-special-elite"
-    >
-      Ghosttour har gravet nogle af Københavns gamle og nyere spøgelseshistorier
-      frem
-    </p>
+  <section class="grid md:grid-cols-2 gap-large pt-large md:pt-xxlarge sticky top-0 min-h-[180vh]">
+    <h1 id="typewriter" class="pt-large md:pt-xxlarge typewriter font-special-elite text-primary-color text-[44px] sm:text-[68px] md:text-xxxxlarge leading-none"></h1>
+    <p class="pt-large md:pt-xxlarge md:text-xlarge text-large leading-normal slideup font-special-elite">Ghosttour har gravet nogle af Københavns gamle og nyere spøgelseshistorier frem</p>
   </section>
 
-  <section
-    class="grid md:grid-cols-2 gap-large pt-large md:pt-xxlarge sticky top-0 min-h-[80vh] bg-secondary-color"
-  >
-  </section>
+  <section class="grid md:grid-cols-2 gap-large pt-large md:pt-xxlarge sticky top-0 min-h-[80vh] bg-secondary-color"></section>
 
   <section class="mx-auto max-w-screen-lg overflow-clip">
     <article id="horisontalscrollsection" class="h-[400vh] relative">
       <ul id="horisontalliste" class="list-none flex sticky top-0">
-        <li
-          class="flex h-[100vh] w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto p-large"
-        >
-          <p
-            class="md:text-xxlarge text-xlarge leading-normal notes01 text-secondary-color -rotate-3 p-large pb-xxlarge h-max font-brockscript transition-transform w-[400px]"
-          >
-            Historier der lå gemt i de gamle arkiver og hos nogle af byens
-            indbyggere.
-          </p>
+        <li class="flex h-[100vh] w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto p-large">
+          <p class="md:text-xxlarge text-xlarge leading-normal notes01 text-secondary-color -rotate-3 p-large pb-xxlarge h-max font-brockscript transition-transform w-[400px]">Historier der lå gemt i de gamle arkiver og hos nogle af byens indbyggere.</p>
         </li>
-        <li
-          class="flex h-[100vh] w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto p-large"
-        >
-          <p
-            class="md:text-xxlarge text-xlarge leading-normal notes02 text-secondary-color p-large pb-xxlarge md:mt-xxlarge h-max font-brockscript w-[400px]"
-          >
-            Det viser sig at det vrimler med spøgelser i København.
-          </p>
+        <li class="flex h-[100vh] w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto p-large">
+          <p class="md:text-xxlarge text-xlarge leading-normal notes02 text-secondary-color p-large pb-xxlarge md:mt-xxlarge h-max font-brockscript w-[400px]">Det viser sig at det vrimler med spøgelser i København.</p>
         </li>
-        <li
-          class="flex h-[100vh] w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto p-large"
-        >
-          <section
-            class="grid md:grid-cols-3 gap-large max-w-screen-lg font-special-elite sticky top-0"
-          >
-            <img
-              class="w-[600px] h-[450px] rotate-2"
-              src="/imgs/ghosttour_lygte.webp"
-              alt="Lygten som omtales i Ghosttour's Spøgelsestur tekst"
-            />
+        <li class="flex h-[100vh] w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto p-large">
+          <section class="grid md:grid-cols-3 gap-large max-w-screen-lg font-special-elite sticky top-0">
+            <img class="w-[600px] h-[450px] rotate-2" src="/imgs/ghosttour_lygte.webp" alt="Lygten som omtales i Ghosttour's Spøgelsestur tekst" />
 
-            <p
-              class="col-span-2 md:text-xlarge text-large leading-normal text-primary-color p-large pb-xxlarge md:mt-xxlarge"
-            >
-              I skæret fra staldlygten tager Ghosttour dig med på en byvandring
-              til nogle af de steder i byen som har med spøgelser at gøre.
-            </p>
+            <p class="col-span-2 md:text-xlarge text-large leading-normal text-primary-color p-large pb-xxlarge md:mt-xxlarge">I skæret fra staldlygten tager Ghosttour dig med på en byvandring til nogle af de steder i byen som har med spøgelser at gøre.</p>
           </section>
         </li>
       </ul>
@@ -71,90 +31,37 @@ import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
   </section>
 
   <section class="mx-auto scrollzoom sticky top-0 slideup2">
-    <img
-      src="/imgs/ghosttour_hus_gullig.webp"
-      class="scrollzoomimg w-full"
-      alt="Ældre fotografi af hus i København. Sandsynligvis Christianshavn."
-    />
-    <article
-      class="grid md:grid-cols-3 gap-large max-w-screen-lg font-special-elite pt-xxxlarge mx-auto"
-    >
-      <img
-        class="w-[600px] h-[450px]"
-        src="/imgs/ghosttour_gade.webp"
-        alt="Foto af det gamle København med Vor Frue Kirke i baggrunden. Højst sandsynligvis Gammeltorv."
-      />
+    <img src="/imgs/ghosttour_hus_gullig.webp" class="scrollzoomimg w-full" alt="Ældre fotografi af hus i København. Sandsynligvis Christianshavn." />
+    <article class="grid md:grid-cols-3 gap-large max-w-screen-lg font-special-elite pt-xxxlarge mx-auto">
+      <img class="w-[600px] h-[450px]" src="/imgs/ghosttour_gade.webp" alt="Foto af det gamle København med Vor Frue Kirke i baggrunden. Højst sandsynligvis Gammeltorv." />
 
-      <p
-        class="col-span-2 md:text-xlarge text-large leading-normal text-primary-color p-large pb-xxlarge md:mt-xxlarge"
-      >
-        Hør historier om helt almindelige menneskers oplevelser med spøgelser og
-        se gamle bygninger, hvor danske helte og berømtheder har holdt til - og
-        måske er de der stadigvæk?
-      </p>
+      <p class="col-span-2 md:text-xlarge text-large leading-normal text-primary-color p-large pb-xxlarge md:mt-xxlarge">Hør historier om helt almindelige menneskers oplevelser med spøgelser og se gamle bygninger, hvor danske helte og berømtheder har holdt til - og måske er de der stadigvæk?</p>
     </article>
-    <h2
-      class="max-w-screen-lg mx-auto pt-large md:pt-xxlarge typewriter font-special-elite text-primary-color text-[44px] sm:text-[68px] md:text-xxxxlarge leading-none pb-xxlarge md:pb-xxxlarge"
-    >
-      Se gamle gader og bygninger i nyt lys
-    </h2>
+    <h2 class="max-w-screen-lg mx-auto pt-large md:pt-xxlarge typewriter font-special-elite text-primary-color text-[44px] sm:text-[68px] md:text-xxxxlarge leading-none pb-xxlarge md:pb-xxxlarge">Se gamle gader og bygninger i nyt lys</h2>
 
     <article class="max-w-screen-lg mx-auto">
       <ul class="grid md:grid-cols-3 gap-xlarge staggeranimation">
         <li class="justify-center p-large">
-          <p
-            class="md:text-xxlarge text-xlarge leading-normal notes01 text-secondary-color -rotate-3 p-large pb-xxlarge h-max font-brockscript w-[300px]"
-          >
-            Få historien om ånderne i Det Grønlandske Hus.
-          </p>
+          <p class="md:text-xxlarge text-xlarge leading-normal notes01 text-secondary-color -rotate-3 p-large pb-xxlarge h-max font-brockscript w-[300px]">Få historien om ånderne i Det Grønlandske Hus.</p>
         </li>
         <li class="justify-center p-large">
-          <p
-            class="md:text-xxlarge text-xlarge leading-normal notes02 text-secondary-color p-large pb-xxlarge md:mt-xxlarge h-max font-brockscript w-[300px]"
-          >
-            Mærk sulten hos den lille, døde 8 årige pige i Gjeddegården.
-          </p>
+          <p class="md:text-xxlarge text-xlarge leading-normal notes02 text-secondary-color p-large pb-xxlarge md:mt-xxlarge h-max font-brockscript w-[300px]">Mærk sulten hos den lille, døde 8 årige pige i Gjeddegården.</p>
         </li>
         <li class="justify-center p-large">
-          <p
-            class="md:text-xxlarge text-xlarge leading-normal notes02 text-secondary-color rotate-1 p-large pb-xxlarge md:mt-xlarge h-max font-brockscript w-[300px]"
-          >
-            kom med på byens ældste kirkegård.
-          </p>
+          <p class="md:text-xxlarge text-xlarge leading-normal notes02 text-secondary-color rotate-1 p-large pb-xxlarge md:mt-xlarge h-max font-brockscript w-[300px]">kom med på byens ældste kirkegård.</p>
         </li>
       </ul>
     </article>
 
-    <article
-      class="bg-secondary-color sticky top-0 grid grid-cols-2 mx-auto max-w-screen-lg place-items-center pb-xxlarge"
-    >
-      <h2
-        class="place-items-center col-span-2 max-w-screen-lg mx-auto pt-large md:pt-xxlarge typewriter font-special-elite text-primary-color text-[44px] sm:text-[68px] md:text-xxxxlarge leading-none pb-xxlarge md:pb-xxxlarge"
-      >
-        Er der mere mellem himmel og jord?
-      </h2>
-      <button
-        class="place-items-center text-primary-color font-medium text-large flex items-center gap-base py-small pl-large bg-transparent w-max"
-        type="button"
-      >
+    <article class="bg-secondary-color sticky top-0 grid grid-cols-2 mx-auto max-w-screen-lg place-items-center pb-xxlarge">
+      <h2 class="place-items-center col-span-2 max-w-screen-lg mx-auto pt-large md:pt-xxlarge typewriter font-special-elite text-primary-color text-[44px] sm:text-[68px] md:text-xxxxlarge leading-none pb-xxlarge md:pb-xxxlarge">Er der mere mellem himmel og jord?</h2>
+      <button class="place-items-center text-primary-color font-medium text-large flex items-center gap-base py-small pl-large bg-transparent w-max" type="button">
         <a href="/byvandringer">Tilbage til oversigt</a>
         <!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#f8f6f2" d="m12 20l-1.425-1.4l5.6-5.6H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8Z"></path></svg> -->
       </button>
-      <button
-        class="place-items-center text-brand-color font-medium text-large flex items-center gap-base py-small pl-large pr-20 bg-primary-color w-max"
-        type="button"
-      >
+      <button class="place-items-center text-brand-color font-medium text-large flex items-center gap-base py-small pl-large pr-20 bg-primary-color w-max" type="button">
         <a href="/booking">Book din byvandring</a>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-          ><path
-            fill="#c01111"
-            d="m12 20l-1.425-1.4l5.6-5.6H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8Z"
-          ></path></svg
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#c01111" d="m12 20l-1.425-1.4l5.6-5.6H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8Z"></path></svg>
       </button>
     </article>
   </section>
@@ -174,8 +81,7 @@ import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
   /* IMPORT FONT */
   @font-face {
     font-family: "Brockscript";
-    src: url("/brockscript_font/brockscript-regular-webfont.woff")
-      format("woff");
+    src: url("/brockscript_font/brockscript-regular-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -258,7 +164,7 @@ import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
       }
     }
 
-    setTimeout(typeWriter, 1000); // Start skrivemaskineeffekten efter 1 sekunder
+    setTimeout(typeWriter, 500); // Start skrivemaskineeffekten efter 1 sekunder
   }
 
   // Lyt efter scroll-begivenheden og udfør funktionen, når elementet er synligt på skærmen
@@ -284,20 +190,16 @@ import WebfeatureLayout from "../layouts/WebfeatureLayout.astro";
   //IMG ZOOM SCROLL
   scroll(
     animate(".scrollzoomimg", {
-      scale: [1, 1.4],
+      scale: [1, 1.45],
     }),
     {
       target: document.querySelector(".scrollzoom"),
-      offset: ["0.2 0.2", "0.6 0.6"],
+      offset: ["0.03 0.03", "0.25 0.25"],
     }
   );
 
   //STAGGER ANIMATE
   inView(".staggeranimation", ({ target }) => {
-    animate(
-      target.querySelectorAll("li"),
-      { opacity: [0, 1] },
-      { duration: 1, delay: stagger(1.5, { start: 0.5 }) }
-    );
+    animate(target.querySelectorAll("li"), { opacity: [0, 1] }, { duration: 1, delay: stagger(1.5, { start: 0.5 }) });
   });
 </script>

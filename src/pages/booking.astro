@@ -5,47 +5,8 @@ import PageIntro from "../components/PageIntro.astro";
 
 <MainLayout title="Booking">
   <PageIntro pageTitle="Booking" summary="Booking af pladser på de åbne ture skal ske senest kl. 13:00 på dagen. Det er nødvendigt at booke plads på de åbne ture. Ghosttour tager forbehold for aflysninger grundet manglende tilmeldinger, sygdom og meget dårligt vejr." />
-  <!-- <section class="pt-xxlarge max-w-screen-lg mx-auto">
-    <form class="font-dm-sans grid md:grid-cols-2">
-      <div>
-        <label for="name">Dit fornavn og efternavn</label>
-        <input type="text" id="name" name="name" class="form-input" placeholder="Fornavn Efternavn" inputmode="text" />
-      </div>
-      <div>
-        <label for="phone">Dit telefonnummer</label>
-        <input type="tel" id="phone" name="phone" class="form-input" placeholder="(0045)12345678" inputmode="tel" />
-      </div>
-      <div>
-        <label for="email">Din e-mail adresse</label>
-        <input type="email" id="email" name="email" class="form-input" placeholder="eksempel@mail.dk" inputmode="email" />
-      </div>
-      <div>
-        <label for="tour">Vælg en byvandring</label>
-        <select id="tour" name="tour" class="form-select">
-          <option value="a">Spøgelsestur</option>
-          <option value="b">Natmandstur</option>
-          <option value="c">Menneskeskæbner</option>
-        </select>
-      </div>
-      <div>
-        <label for="date">Vælg en dato</label>
-        <input type="date" id="date" name="date" class="form-input" />
-      </div>
-      <div>
-        <label for="time">Vælg et tidspunkt</label>
-        <input type="time" id="time" name="time" class="form-input" />
-      </div>
-      <div>
-        <label for="participants">Antal deltagere</label>
-        <input type="number" id="participants" name="participants" class="form-input" inputmode="numeric" />
-      </div>
-      <div>
-        <label for="comments">Kommentarer/spørgsmål</label>
-        <textarea id="comments" name="comments" class="form-textarea" placeholder="Tilføj en kommentar eller et spørgsmål her og vi vender tilbage hurtigst muligt."></textarea>
-      </div>
-    </form>
-  </section> -->
-  <section class="sm:grid-cols-2 sm:grid max-w-screen-lg mx-auto gap-y-base gap-x-xlarge text-secondary-color pt-xlarge">
+
+  <!-- <section class="sm:grid-cols-2 sm:grid max-w-screen-lg mx-auto gap-y-base gap-x-xlarge text-secondary-color pt-xlarge">
     <form class="py-base sm:py-0">
       <label>Dit fornavn</label><br />
       <input class="w-full" type="text" placeholder="Fornavn" inputmode="text" />
@@ -98,52 +59,52 @@ import PageIntro from "../components/PageIntro.astro";
       <label>Kommentarer/spørgsmål</label><br />
       <input class="w-full" type="text" placeholder="Tilføj en kommentar eller et spørgsmål og vi vender tilbage hurtigst muligt." inputmode="text" />
     </form>
-  </section>
-
-  <!-- <section class="sm:grid-cols-2 sm:grid max-w-screen-lg mx-auto gap-y-base gap-x-xlarge text-secondary-color pt-xlarge">
-    <label class="py-base sm:py-0">Dit fornavn</label><br />
-    <input class="w-full" type="text" placeholder="Fornavn" inputmode="text" />
-
-    <label class="py-base sm:py-0">Dit efternavn</label><br />
-    <input class="w-full" type="text" placeholder="Efternavn" inputmode="text" />
-
-    <label class="py-base sm:py-0">Dit telefonnummer</label><br />
-    <input class="w-full" type="tel" placeholder="(0045)12345678" inputmode="tel" />
-
-    <label class="py-base sm:py-0">Din e-mail adresse</label><br />
-    <input class="w-full" type="email" placeholder="eksempel@mail.dk" inputmode="email" />
-
-    <form class="py-base sm:py-0" id="form_byvandring">
-      <label>Vælg en byvandring</label><br />
-
-      <input type="radio" id="spoegelsestur" name="fav_language" value="spoegelsestur" />
-      <label for="spoegelsestur">Spøgelsestur</label><br />
-
-      <input type="radio" id="natmaendstur" name="fav_language" value="natmaendstur" />
-      <label for="natmaendstur">Natmændstur</label><br />
-
-      <input type="radio" id="menneskeskaebner" name="fav_language" value="menneskeskaebner" />
-      <label for="menneskeskaebner">Menneskeskæbner</label>
-    </form>
-
-    <label class="py-base sm:py-0">Vælg en dato</label><br />
-    <input id="date_placeholder" class="w-full" type="date" />
-
-    <label class="py-base sm:py-0">Antal voksne</label><br />
-    <input class="w-full" type="number" inputmode="numeric" />
-
-    <label class="py-base sm:py-0">Antal børn</label><br />
-    <input class="w-full" type="number" inputmode="numeric" />
-
-    <label class="sm:col-span-2 py-base sm:py-0">Kommentarer/spørgsmål</label><br />
-    <input class="w-full" type="text" placeholder="Tilføj en kommentar eller et spørgsmål og vi vender tilbage hurtigst muligt." inputmode="text" />
   </section> -->
+
+  <section class="max-w-screen-lg mx-auto text-secondary-color pt-xxxlarge">
+    <form class="sm:grid-cols-2 sm:grid gap-x-xlarge text-secondary-color">
+      <label for="fornavn">Dit fornavn</label><br />
+      <input id="fornavn" class="w-full" type="text" placeholder="Fornavn" inputmode="text" />
+
+      <label for="efternavn">Dit efternavn</label><br />
+      <input id="efternavn" class="w-full" type="text" placeholder="Efternavn" inputmode="text" />
+
+      <label for="telefonnummer">Dit telefonnummer</label><br />
+      <input id="telefonnummer" class="w-full" type="tel" placeholder="(0045)12345678" inputmode="tel" />
+
+      <label for="email">Din e-mail adresse</label><br />
+      <input id="email" class="w-full" type="email" placeholder="eksempel@mail.dk" inputmode="email" />
+
+      <label class="col-span-2">Vælg en byvandring</label>
+
+      <input class="col-start-1" type="radio" id="spoegelsestur" name="byvandring" value="spoegelsestur" />
+      <label class="col-start-1" for="spoegelsestur">Spøgelsestur</label><br />
+
+      <input class="col-start-1" type="radio" id="natmaendstur" name="byvandring" value="natmaendstur" />
+      <label class="col-start-1" for="natmaendstur">Natmændstur</label><br />
+
+      <input class="col-start-1" type="radio" id="menneskeskaebner" name="byvandring" value="menneskeskaebner" />
+      <label class="col-start-1" for="menneskeskaebner">Menneskeskæbner</label><br />
+
+      <label for="dato">Vælg en dato</label><br />
+      <input id="dato" class="w-full" type="date" />
+
+      <label for="antal-voksne">Antal voksne</label><br />
+      <input id="antal-voksne" class="w-full" type="number" inputmode="numeric" />
+
+      <label for="antal-boern">Antal børn</label><br />
+      <input id="antal-boern" class="w-full" type="number" inputmode="numeric" />
+
+      <label for="kommentar">Kommentarer/spørgsmål</label><br />
+      <input id="kommentar" class="w-full" type="text" placeholder="Tilføj en kommentar eller et spørgsmål og vi vender tilbage hurtigst muligt." inputmode="text" />
+    </form>
+  </section>
 </MainLayout>
 
 <style>
-  #form_byvandring input {
+  /* #form_byvandring input {
     margin: 1rem !important;
-  }
+  } */
 
   #date_placeholder {
     color: #9da3ae;
