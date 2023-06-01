@@ -3,7 +3,7 @@
 
 <!-- FOOTER -->
 <nav>
-  <ul class="grid grid-cols-2 md:grid-cols-4 gap-x-large text-small pt-xxxlarge">
+  <ul class="grid grid-cols-2 md:grid-cols-5 gap-x-large text-small pt-xxxlarge">
     <li>
       <p>Kontakt</p>
       <ul>
@@ -58,6 +58,13 @@
         </div>
       </ul>
     </li>
+    <li>
+      <form class="grid py-base sm:py-0 text-secondary-color">
+        <label class="">Få de seneste opdateringer med vores nyhedsbrev</label><br />
+        <input class="w-full" type="email" placeholder="navn@eksempel.dk" inputmode="email" />
+        <input type="submit" value="send" class="text-primary-color hover:cursor-pointer focus:bg-red-500" />
+      </form>
+    </li>
   </ul>
 </nav>
 
@@ -68,5 +75,13 @@
   p {
     padding: 8px 0px 8px 0px;
     color: #9da3ae;
+  }
+  input {
+    margin-top: 0.25rem !important;
+    padding: 0.25rem 1rem !important;
+  }
+
+  label {
+    color: #f8f6f2;
   }
 </style>

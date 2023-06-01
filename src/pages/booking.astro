@@ -6,7 +6,7 @@ import PageIntro from "../components/PageIntro.astro";
 <MainLayout title="Booking">
   <PageIntro pageTitle="Booking" summary="Booking af pladser på de åbne ture skal ske senest kl. 13:00 på dagen. Det er nødvendigt at booke plads på de åbne ture. Ghosttour tager forbehold for aflysninger grundet manglende tilmeldinger, sygdom og meget dårligt vejr." />
 
-  <!-- <section class="sm:grid-cols-2 sm:grid max-w-screen-lg mx-auto gap-y-base gap-x-xlarge text-secondary-color pt-xlarge">
+  <section class="sm:grid-cols-2 sm:grid max-w-screen-lg mx-auto gap-y-base gap-x-xlarge text-secondary-color pt-xlarge">
     <form class="py-base sm:py-0">
       <label>Dit fornavn</label><br />
       <input class="w-full" type="text" placeholder="Fornavn" inputmode="text" />
@@ -57,48 +57,48 @@ import PageIntro from "../components/PageIntro.astro";
 
     <form class="sm:col-span-2 py-base sm:py-0">
       <label>Kommentarer/spørgsmål</label><br />
-      <input class="w-full" type="text" placeholder="Tilføj en kommentar eller et spørgsmål og vi vender tilbage hurtigst muligt." inputmode="text" />
+      <input class="w-full text-green-400" type="text" placeholder="Tilføj en kommentar eller et spørgsmål og vi vender tilbage hurtigst muligt." inputmode="text" />
     </form>
-  </section> -->
+  </section>
 
-  <section class="max-w-screen-lg mx-auto text-secondary-color pt-xxxlarge">
-    <form class="sm:grid-cols-2 sm:grid gap-x-xlarge text-secondary-color">
-      <label for="fornavn">Dit fornavn</label><br />
+  <!-- <section class="max-w-screen-lg mx-auto text-secondary-color pt-xxxlarge">
+    <form class="grid gap-x-xlarge text-secondary-color">
+      <label for="fornavn">Dit fornavn</label>
       <input id="fornavn" class="w-full" type="text" placeholder="Fornavn" inputmode="text" />
 
-      <label for="efternavn">Dit efternavn</label><br />
+      <label for="efternavn">Dit efternavn</label>
       <input id="efternavn" class="w-full" type="text" placeholder="Efternavn" inputmode="text" />
 
-      <label for="telefonnummer">Dit telefonnummer</label><br />
+      <label for="telefonnummer">Dit telefonnummer</label>
       <input id="telefonnummer" class="w-full" type="tel" placeholder="(0045)12345678" inputmode="tel" />
 
-      <label for="email">Din e-mail adresse</label><br />
+      <label for="email">Din e-mail adresse</label>
       <input id="email" class="w-full" type="email" placeholder="eksempel@mail.dk" inputmode="email" />
 
       <label class="col-span-2">Vælg en byvandring</label>
 
       <input class="col-start-1" type="radio" id="spoegelsestur" name="byvandring" value="spoegelsestur" />
-      <label class="col-start-1" for="spoegelsestur">Spøgelsestur</label><br />
+      <label class="col-start-1" for="spoegelsestur">Spøgelsestur</label>
 
       <input class="col-start-1" type="radio" id="natmaendstur" name="byvandring" value="natmaendstur" />
-      <label class="col-start-1" for="natmaendstur">Natmændstur</label><br />
+      <label class="col-start-1" for="natmaendstur">Natmændstur</label>
 
       <input class="col-start-1" type="radio" id="menneskeskaebner" name="byvandring" value="menneskeskaebner" />
-      <label class="col-start-1" for="menneskeskaebner">Menneskeskæbner</label><br />
+      <label class="col-start-1" for="menneskeskaebner">Menneskeskæbner</label>
 
-      <label for="dato">Vælg en dato</label><br />
+      <label for="dato">Vælg en dato</label>
       <input id="dato" class="w-full" type="date" />
 
-      <label for="antal-voksne">Antal voksne</label><br />
+      <label for="antal-voksne">Antal voksne</label>
       <input id="antal-voksne" class="w-full" type="number" inputmode="numeric" />
 
-      <label for="antal-boern">Antal børn</label><br />
+      <label for="antal-boern">Antal børn</label>
       <input id="antal-boern" class="w-full" type="number" inputmode="numeric" />
 
-      <label for="kommentar">Kommentarer/spørgsmål</label><br />
+      <label for="kommentar">Kommentarer/spørgsmål</label>
       <input id="kommentar" class="w-full" type="text" placeholder="Tilføj en kommentar eller et spørgsmål og vi vender tilbage hurtigst muligt." inputmode="text" />
     </form>
-  </section>
+  </section> -->
 </MainLayout>
 
 <style>
