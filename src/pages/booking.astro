@@ -99,6 +99,45 @@ import PageIntro from "../components/PageIntro.astro";
       <input class="w-full" type="text" placeholder="Tilføj en kommentar eller et spørgsmål og vi vender tilbage hurtigst muligt." inputmode="text" />
     </form>
   </section>
+
+  <section class="sm:grid-cols-2 sm:grid max-w-screen-lg mx-auto gap-y-base gap-x-xlarge text-secondary-color pt-xlarge">
+    <label class="py-base sm:py-0">Dit fornavn</label><br />
+    <input class="w-full" type="text" placeholder="Fornavn" inputmode="text" />
+
+    <label class="py-base sm:py-0">Dit efternavn</label><br />
+    <input class="w-full" type="text" placeholder="Efternavn" inputmode="text" />
+
+    <label class="py-base sm:py-0">Dit telefonnummer</label><br />
+    <input class="w-full" type="tel" placeholder="(0045)12345678" inputmode="tel" />
+
+    <label class="py-base sm:py-0">Din e-mail adresse</label><br />
+    <input class="w-full" type="email" placeholder="eksempel@mail.dk" inputmode="email" />
+
+    <form class="py-base sm:py-0" id="form_byvandring">
+      <label>Vælg en byvandring</label><br />
+
+      <input type="radio" id="spoegelsestur" name="fav_language" value="spoegelsestur" />
+      <label for="spoegelsestur">Spøgelsestur</label><br />
+
+      <input type="radio" id="natmaendstur" name="fav_language" value="natmaendstur" />
+      <label for="natmaendstur">Natmændstur</label><br />
+
+      <input type="radio" id="menneskeskaebner" name="fav_language" value="menneskeskaebner" />
+      <label for="menneskeskaebner">Menneskeskæbner</label>
+    </form>
+
+    <label class="py-base sm:py-0">Vælg en dato</label><br />
+    <input id="date_placeholder" class="w-full" type="date" />
+
+    <label class="py-base sm:py-0">Antal voksne</label><br />
+    <input class="w-full" type="number" inputmode="numeric" />
+
+    <label class="py-base sm:py-0">Antal børn</label><br />
+    <input class="w-full" type="number" inputmode="numeric" />
+
+    <label class="sm:col-span-2 py-base sm:py-0">Kommentarer/spørgsmål</label><br />
+    <input class="w-full" type="text" placeholder="Tilføj en kommentar eller et spørgsmål og vi vender tilbage hurtigst muligt." inputmode="text" />
+  </section>
 </MainLayout>
 
 <style>

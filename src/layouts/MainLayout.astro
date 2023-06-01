@@ -12,19 +12,14 @@ const { title, description, keywords } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
-
+    <meta name="robots" content="noindex, nofollow" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Special+Elite&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Special+Elite&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="" />
     <title>{title}</title>
   </head>
-  <body
-    class="bg-secondary-color text-primary-color font-regular leading-none text-base font-dm-sans"
-  >
+  <body class="bg-secondary-color text-primary-color font-regular leading-none text-base font-dm-sans">
     <main class="max-w-screen-xl mx-auto p-base">
       <Nav />
       <slot />
@@ -40,7 +35,12 @@ const { title, description, keywords } = Astro.props;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
     background-color: #cccccc;
+  }
+
+  @media only screen and (max-width: 768px) {
+    body {
+      background-image: url("/imgs/ghosttour_finger-print.webp");
+    }
   }
 </style>

@@ -9,7 +9,13 @@ class Login extends HTMLElement {
     this.html = `<style>
       /****** LOGIN MODAL ******/
       #login-modal {
-          background:black;
+         
+              background-image: url("/imgs/ghosttour_finger-print_02.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+          
           position:fixed;
           width:100vw;
           height:100vh;
@@ -18,8 +24,9 @@ class Login extends HTMLElement {
         padding: 30px;
         max-width: 350px;
         width: 100% !important;
-        background-color: #F7F7F7;
+        background-color: #0e0e10;
         margin: 0 auto;
+     
         border-radius: 2px;
         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
         overflow: hidden;
@@ -77,8 +84,8 @@ class Login extends HTMLElement {
       <div class="modal-dialog">
         <div class="loginmodal-container">
           <h1>Login</h1><br>
-          <p>This is a school project</p>
-          <p>The password is <code>kea</code></p>
+          <p>Dette er et skoleprojekt fra KEA.</p>          <p>Tast password ind for at se sitet.</p>
+
           <form>
             <input type="password" name="pass" placeholder="Password">
             <input type="submit" name="login" class="login loginmodal-submit" value="Login">
